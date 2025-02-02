@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>คำนวนพื้นที่สี่เหลี่ยมพื้นผ้า</h2>
+    <input type="number" name="num1" placeholder="กว้าง" id="nb1">
+    <input type="number" name="num2" placeholder="ยาว" id="nb2">
+    <button onclick="calculate()">ยืนยัน</button>
+    <h3 id="greatings"></h3>
+    <script>
+        function calculate(){
+            var width = document.getElementById("nb1").value;
+            var lenght = document.getElementById("nb2").value;
+            var total = width*lenght;
+            document.getElementById("greatings").innerHTML = "พื้นที่สี่เหลี่ยม = "+total ;
+        }
+    </script>
+</body>
+</html>
