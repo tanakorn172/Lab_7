@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างที่ 5</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h3>การจัดการ DOM</h3>
+    <p id="text">นี่คือข้อความตัวอย่าง</p>
+    <button onclick="changeText()">เปลี่ยนข้อความ</button>
+    <button onclick="toggleHighlight()">เน้นข้อความ</button>
+
+    <script>
+        function changeText(){
+            // เปลี่ยนข้อความใน p
+            document.getElementById("text").textContent = "ข้อความถูกเปลี่ยนแล้ว!"
+        }
+
+        function toggleHighlight() {
+            // สลับ class highlight
+            let text = document.getElementById("text");
+            text.classList.toggle("highlight")
+        }
+    </script>
+</body>
+</html>
