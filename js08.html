@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างที่ 8</title>
+</head>
+<body>
+    <h3>นาฬิกาจับเวลา</h3>
+    <div id ="timer">0</div>
+    <button onclick="startTime()">เริ่ม</button>
+    <button onclick="stopTime()">หยุด</button>
+    <button onclick="resetTime()">รีเซ็ต</button>
+
+    <script>
+        let timeInterval;
+        let seconds = 0;
+
+        function startTime(){
+            timeInterval = setInterval(function () {
+                seconds++;
+                document.getElementById("timer").textContent = seconds;
+                },1000);
+            }
+        
+            function stopTime() {
+                clearInterval(timeInterval);
+                timeInterval = null;
+            }
+
+            function resetTime() {
+                seconds = 0;
+                document.getElementById("timer").textContent = seconds;
+                clearInterval(timeInterval);
+            }
+    </script>
+</body>
+</html>
