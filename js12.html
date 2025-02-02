@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างตัวนับจำนวนคลิก</title>
+</head>
+<body>
+    <div id="example12">
+        <h3>12. ตัวนับจำนวนคลิก</h3>
+        <button onclick="incrementCounter()">คลิกที่นี่</button>
+        <p>จำนวนคลิก: <span id="counter">0</span></p>
+    </div>
+    <script>
+        // ตัวแปรเก็บจำนวนคลิก
+        let clickCount = 0;
+
+        // ฟังก์ชันเพิ่มจำนวนคลิก
+        function incrementCounter() {
+            // เพิ่มค่าตัวนับ
+            clickCount++;
+            // อัปเดตข้อความแสดงจำนวนคลิก
+            document.getElementById("counter").textContent = clickCount;
+        }
+    </script>
+</body>
+</html>
