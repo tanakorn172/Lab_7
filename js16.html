@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ตัวอย่างสไลด์โชว์รูปภาพ</title>
+</head>
+<body>
+    <div id="example16">
+        <h3>16. สไลด์โชว์รูปภาพ</h3>
+        <div class="slideshow">
+            <img id="slideImage" src="url รูปภาพ ขนาด 400x300" alt="slideshow" />
+            <button onclick="changeSlide(-1)">ก่อนหน้า</button>
+            <button onclick="changeSlide(1)">ถัดไป</button>
+        </div>
+    </div>
+    <style>
+        .slideshow {
+            text-align: center;
+        }
+        .slideshow img {
+            max-width: 400px;
+            height: 300px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        // สร้าง Array เก็บ URL รูปภาพ
+        const images = [
+            "url รูปภาพ ขนาด 400x300",
+            "url รูปภาพ ขนาด 400x300",
+            // ...
+        ];
+        let currentSlide = 0;
+
+        // ฟังก์ชันเปลี่ยนสไลด์
+        function changeSlide(direction) {
+            currentSlide = (currentSlide + direction + images.length) % images.length;
+            document.getElementById("slideImage").src = images[currentSlide];
+        }
+    </script>
+</body>
+</html>
