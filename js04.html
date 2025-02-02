@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวอย่างที่ 4</title>
+</head>
+<body>
+    <h3>รายการสินค้า</h3>
+    <button onclick="showProducts()">แสดงรายการสินค้า</button>
+    <button onclick="clearProducts()">ปิดรายการทั้งหมด</button>
+    <ul id="productList"></ul>
+
+    <script>
+        function showProducts(){
+            const products = ["แอปเปิ้ล", "กล้วย", "ส้ม", "มะม่วง"];
+            let productList = document.getElementById("productList");
+            productList.innerHTML = ""; // ล้างรายการเดิม
+
+            for (let i = 0; i < products.length; i++){
+                let li = document.createElement("li");
+                li.textContent = products[i];
+                productList.appendChild(li);
+            }
+        }
+        function clearProducts(){
+            productList.innerHTML = ""; // ล้างรายการเดิม 
+        }
+    </script>
+</body>
+</html>
